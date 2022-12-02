@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(240, 242, 245);
+}
+
+#root {
+    margin: 0px;
+    padding: 0px;
+
+    height: 100%;
+
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    opacity: .9;
+    background-color: rgb(240, 242, 245);
+
+
+}
+
+.home {
+    background-color: rgb(240, 242, 245);
+    height: 100%;
+    width: 100%;
+
+    margin: 0px;
+    padding: 0px;
+    /*background-color: #FFD7D7;*/
+    /* background-image: rgba(0.5), url("../images/network.jpg");*/
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/network.webp");
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+/*Le post et le displayPost*/
+.index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0%;
+    background-color: rgb(240, 242, 245);
+
+
+
+
+}
+
+/*----------------------POST-----------------------------------*/
+.post-container {
+    background-color: rgb(240, 242, 245);
+
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    width: 30vw;
+    box-shadow: -5px 0px 6.5px -3.5px #4E5166, 5px 0px 6.5px -3.5px #4E5166, -1px 4px 12.5px 5px #4E5166;
+    box-shadow: -5px 0px 6.5px -3.5px #4E5166, 5px 0px 6.5px -3.5px #4E5166, -1px 4px 12.5px 5px #4E5166;
+}
+
+
+
+
+
+.post-container textarea {
+    width: 90%;
+    border: 2px solid #4E5166;
+    border-radius: 10px;
+    padding: 1%;
+    color: black;
+
+}
+
+.form-comment label {
+    padding: 15px;
+
+}
+
+.form-comment #ok {
+    padding: 15px;
+
+}
+
+.form-comment {
+    background-color: rgb(240, 242, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.form-comment textarea {
+    width: 80%;
+    border: 2px solid #4E5166;
+    border-radius: 50px;
+    height:50px;
+    padding: 1%;
+    color: black;
+}
+
+.form-comment textarea::-moz-placeholder {
+    text-align:center;
+ } 
+
+
+
+
+
+.post {
+    width: 100%;
+    border: 2px solid #4E5166;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*Cache l'image du input file et du bouton envoyer pour transformer en icones*/
+#image {
+    display: none;
+
+}
+
+.image_space {
+    margin-right: 10px;
+}
+
+#envoyer-image,
+.coucou {
+    visibility: hidden;
+
+}
+
+.espace-bouton {
+    display: flex;
+}
+
+.envoyer_space {
+    margin-right: 10px;
+}
+
+/*Message d'erreur si on n'envoit ni texte ni image*/
+.msg-error-post {
+    visibility: hidden;
+    color: rgb(255, 15, 15);
+    filter: brightness(100%)
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+textarea::placeholder {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+#postMyText {
+    visibility: hidden;
+}
+
+
+/*----------------------DISPLAY-----------------------------------*/
+
+.display-container {
+   
+    border-radius: 10px;
+    background-color: rgb(240, 242, 245);
+   
+
+    box-shadow: -5px 0px 6.5px -3.5px #4E5166, 5px 0px 6.5px -3.5px #4E5166, -1px 4px 12.5px 5px #4E5166;
+    box-shadow: -5px 0px 6.5px -3.5px #4E5166, 5px 0px 6.5px -3.5px #4E5166, -1px 4px 12.5px 5px #4E5166;
+    padding: 10px;
+    width: 30vw;
+    margin-bottom: 30px;
+    word-break: break-word;
+    /*Pour permettre un retour à la ligne quand un mot est trop long*/
+
+}
+
+.post-container {
+    border-top: 20px solid #4E5166;
+    border-radius: 10px;
+
+
+}
+
+.displayFormModif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.images {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.msg-container {
+    background-color: white;
+    padding: 15px;
+    border: 2px solid rgb(221, 223, 226);
+
+}
+
+.en-gras {
+    font-weight: 1000;
+}
+
+.ligne-séparation {
+    border-top: 1px solid #4E5166;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+
+
+.image-profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+    /*Bordure pour les images de profil ?
+    border: 2px solid #4E5166;
+    width: 49px;
+    height:49px;
+    border-radius: 24.5px;
+    */
+}
+
+.image-profil-com {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 15px;
+
+}
+
+
+
+.fa-ellipsis {
+    font-size: 20px;
+    display: inline;
+}
+
+.fa-image {
+    font-size: 25px;
+    display: inline;
+}
+
+.fa-paper-plane {
+    font-size: 25px;
+    display: inline;
+}
+
+.fa-rotate-left,
+.fa-pen-to-square,
+.fa-trash-can {
+    font-size: 25px;
+    display: inline;
+}
+
+.fa-user,
+.fa-image,
+.fa-paper-plane,
+.fa-ellipsis,
+.fa-rotate-left,
+.fa-pen-to-square,
+.fa-comment,
+.fa-comment-slash {
+    color: black;
+}
+
+.fa-user:hover,
+.fa-image:hover,
+.fa-paper-plane:hover,
+.fa-ellipsis:hover,
+.fa-rotate-left:hover,
+.fa-pen-to-square:hover,
+.fa-comment:hover {
+    color: green;
+    display: inline;
+}
+
+.fa-comment-slash:hover,
+.fa-trash-can:hover {
+    color: red;
+    display: inline;
+}
+
+.inline {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.inline i {
+    display: inline-block;
+    
+}
+.inline{
+    padding: 5px;
+    background: radial-gradient(circle, rgba(255,215,215,1) 84%, rgba(240,242,245,1) 100%)
+}
+
+
+
+
+/*----------------------Modif-post-----------------------------------*/
+
+#onePost {
+    background-color: rgb(240, 242, 245);
+    border: 2px solid rgb(221, 223, 226);
+    padding: 15px;
+}
+
+.modifAndDelete {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.modifAndDelete i{
+    margin-right: 15px;
+}
+
+.Form_Modif {
+
+    height: 100%;
+    width: 100%;
+}
+
+#my-post {
+    width: 60%;
+    border: 2px solid #4E5166;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.user {
+    width: 100%;
+    height: 100%;
+}
+
+
+#comment {
+    width: 100%;
+    border: 2px solid #4E5166;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+#MonCommentaire {
+    visibility: hidden;
+}
+
+.OnePost_container,
+.form-modif-container,
+.oneComment-container,
+.commentModif-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+
+.img-Form-modif {
+    width: 30vw;
+    height: 300px;
+    object-fit: cover;
+}
+
+#modif-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-modif-container {
+    margin-top: 40px;
+}
+
+
+/*----------------------Commentaires-----------------------------------*/
+
+.comment-head{
+    display:flex;
+  
+}
+.nomPrenomModifSuppr{
+    display:flex;
+ 
+}
+
+.comment_container-header .en-gras{
+    margin-right: 20px;
+}
+.comment_container-header i{
+    font-size:20px;
+}
+
+#commentaires-input {
+    width: 80%;
+    border: 2px solid #4E5166;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.comments-container {
+    display: flex;
+}
+
+.comment-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.comment_container-header {
+    background-color: #FFD7D7;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.comment_container-body {
+    padding: 10px;
+
+}
+
+.poster {
+    visibility: 0;
+}
+
+.msg-error-comment {
+    visibility: hidden;
+    color: red;
+}
+
+
+.comment {
+    width: 100%;
+    height: 100px;
+    margin-left: 15%;
+}
+
+.center {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+
+.form-modif-container-label {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*----------------------Likes-----------------------------------*/
+.likes-modif-container {
+    width: 100%;
+    margin: 0px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(255,215,215);
+    background: radial-gradient(circle, rgba(255,215,215,1) 84%, rgba(240,242,245,1) 100%);
+
+}
+
+.likes-modif-container {
+    font-size: 15px;
+}
+
+#like,
+#dislike {
+    margin-right: 10px;
+}
+
+.likes-modify-container {
+    display: flex;
+    justify-content: space-between
+}
+
+.likes {
+    display: flex;
+}
+
+.modify {
+    display: flex;
+    margin-right: 5%;
+}
+
+
+.one-post {
+    display: flex;
+}
+
+.one-post div {
+    margin-right: 5%;
+}
+
+.fa-thumbs-up:hover {
+    color: green;
+}
+
+.fa-thumbs-down:hover{
+    color: red;
+}
+
+/*----------------------PageNotFound-----------------------------------*/
+.pageNotFound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageNotFound-container img {
+    width: 30vw;
+    height: 30vw;
+}
+
+/*---------------------------------------Version tablette--------------------------------------------------------------*/
+
+@media screen and (min-width:601px) and (max-width:1024px) {
+
+
+
+    .home {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        /*background-color: #FFD7D7;*/
+        /* background-image: rgba(0.5), url("../images/network.jpg");*/
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/network_low.webp");
+
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Lato', sans-serif;
+
+
+    }
+
+    .display-container {
+        background-color: white;
+        padding: 10px;
+        width: 60vw;
+        margin-bottom: 10px;
+        word-break: break-word;
+        /*Pour permettre un retour à la ligne quand un mot est trop long*/
+    }
+
+
+
+    .post-container {
+        width: 60vw;
+    }
+
+    .images {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+
+    }
+
+    .img-Form-modif {
+        width: 50vw;
+        height: 300px;
+        object-fit: cover;
+    }
+
+}
+
+/*---------------------------------------Version mobile--------------------------------------------------------------*/
+@media screen and (max-width:600px) {
+
+
+
+    .home {
+
+        /*background-color: #FFD7D7;*/
+        /* background-image: rgba(0.5), url("../images/network.jpg");*/
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/network_low.webp");
+
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Lato', sans-serif;
+
+
+    }
+
+    .post-buttons {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+
+    }
+
+    .body {
+        background-color: black;
+    }
+
+
+
+
+
+    .post-container {
+        border-top: 10px solid palevioletred;
+        border-radius: 10px;
+        background-color: rgb(240, 242, 245);
+
+        color: black;
+        display: flex;
+        justify-content: center;
+
+        padding: 10px;
+        margin: 20px;
+        width: 80vw;
+    }
+
+    .post-container textarea {
+        width: 80%;
+        margin-left: 5%;
+
+    }
+
+    textarea::placeholder {
+        color: black;
+    }
+
+    .display-container {
+        background-color: white;
+
+        padding: 10px;
+        width: 80vw;
+        margin-bottom: 10px;
+        word-break: break-word;
+        /*Pour permettre un retour à la ligne quand un mot est trop long*/
+    }
+
+    .display-container #modif-comment-form {
+        width: 100%;
+    }
+
+    .comment {
+        width: 100%;
+        height: 300px;
+        margin-left: 5%;
+    }
+
+    .images {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .img-Form-modif {
+        width: 80vw;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #like,
+    #dislike {
+        margin-right: 10px;
+    }
+
+    .likes-modify-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .likes {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+
+}

@@ -1,0 +1,133 @@
+.bouton-rouge {
+    border: 2px solid black;
+    background-color: #FD2D01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    box-shadow: 1px 1px 1px grey;
+
+}
+
+.bouton-gris {
+    padding: 15px;
+    margin: 5px;
+    color: black;
+    border: solid 1px black;
+    text-align: center;
+
+    background: rgb(78, 81, 102);
+    background: linear-gradient(104deg, rgba(78, 81, 102, 1) 0%, rgba(253, 45, 1, 1) 100%);
+    box-shadow: 1px 1px 1px grey;
+}
+
+
+.avatar-profil {
+    width: 200px;
+    height: 200px;
+    /*border-radius: 100px;*/
+    /*clip-path:ellipse(33% 50%);*/
+    object-fit: cover;
+
+    
+
+
+}
+
+
+
+.petit-formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #FD2D01;
+    border: 2px solid black;
+    width: 400px;
+}
+
+.petit-formulaire .profil-button {
+    margin-top: 25px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+
+.profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profil-container {
+    margin-top:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+}
+
+/*Page d'attente*/
+.pageAttente {
+    height: 100%;
+    width: 100%;
+
+}
+
+.page-attente-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+}
+
+.profil_post img {
+    margin-right: 20px;
+}
+
+.profil_post p {
+    display: flex;
+    align-items: center;
+
+}
+
+/*---------------------------------------Version tablette--------------------------------------------------------------*/
+@media screen and (min-width:601px) and (max-width:1024px) {
+    .profil_post img {
+        margin-right: 20px;
+    }
+
+    .profil_post p {
+        display: flex;
+
+    }
+}
+
+/*---------------------------------------Version mobile--------------------------------------------------------------*/
+@media screen and (max-width:600px) {
+    .pageAttente {
+        background-color: black;
+        font-size: 25px;
+    }
+
+    .page-attente-container {
+        background-color: rgb(240, 242, 245);
+
+    }
+
+   
+
+
+}
