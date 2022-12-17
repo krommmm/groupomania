@@ -45,7 +45,7 @@
 
 /* Login*/
 .password-error,
-.email-error,.maj-error,.min-error,.nb-error,.charSpecial-error {
+.email-error,.maj-error,.min-error,.nb-error,.charSpecial-error, .noSpace-error {
     color: red;
     display:none;
     max-width: 200px;
