@@ -18,6 +18,7 @@ const SignUpForm = () => {
   var answerMin = document.querySelector(".min-error");
   var answerNb = document.querySelector(".nb-error");
   var answerSpecial = document.querySelector(".charSpecial-error");
+  var noSpace = document.querySelector(".noSpace-error");
 
   var isTaken = false; // Si un utilisateur a la même email que le mail de l'inscription
 
@@ -59,6 +60,7 @@ const SignUpForm = () => {
       answerMin === "" ||
       answerNb === "" ||
       answerSpecial === "" ||
+      noSpace ==="" ||
       answer.style.display === "flex" ||
       answerEmail.style.display === "flex" ||
       answerPassword.style.display === "flex" ||
@@ -67,6 +69,7 @@ const SignUpForm = () => {
       answerMin.style.display === "flex" ||
       answerNb.style.display === "flex" ||
       answerSpecial.style.display === "flex" ||
+      noSpace.style.display === "flex" ||
 
       answerPrénom.style.display === "flex" ||
       answerNom.style.display === "flex"
@@ -135,17 +138,26 @@ const SignUpForm = () => {
     setPassword(e.target.value);
     let testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{12,}$/;
     let testMajuscule= /[A-Z]/;
+    let testNoSpace = /(?=.*[\s])/gi;
     let testMinuscule = /[a-z]/;
     let testChiffre = /[0-9]/;
     let testCharSpecial = /[\^>$*<%+=@!,;:?.]/;
     let test12Char = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=^.{12,}$)/;
-    //Si problème avec espace /[\S]/ ou \S
+    // /(?=.*[\^>$*<%+=@!,;:?.])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[\s])(?=.{12,})/gi;
+    //Si problème avec espace (?!.*[\s]);
 
     if (testMajuscule.test(e.target.value) || e.target.value == "") {
       document.querySelector(".maj-error").style.display = "none";
       document.querySelector(".answer-input").innerHTML = "";
     } else {
       document.querySelector(".maj-error").style.display = "flex";
+    }
+
+    if (testNoSpace.test(e.target.value) || e.target.value == "") {
+      document.querySelector(".noSpace-error").style.display = "flex";
+      document.querySelector(".answer-input").innerHTML = "";
+    } else {
+      document.querySelector(".noSpace-error").style.display = "none";
     }
   
 
@@ -250,6 +262,7 @@ const SignUpForm = () => {
             <div className="min-error"><br/>1 minuscule</div>
             <div className="nb-error">1 chiffre</div>
             <div className="charSpecial-error">1 charactère spécial</div>
+            <div className="noSpace-error">ne pas mettre d'espace</div>
             </div>
             
           <label htmlFor="prénom">Prénom</label>
