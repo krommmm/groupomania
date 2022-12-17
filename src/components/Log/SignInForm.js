@@ -99,6 +99,7 @@ const SignInForm = () => {
     setPassword(e.target.value);
     //let testPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{12,}$/;
     let testMajuscule= /[A-Z]/;
+    let testNoSpace = /(?=.*[\s])/gi;
     let testMinuscule = /[a-z]/;
     let testChiffre = /[0-9]/;
     let testCharSpecial = /[\^>$*<%+=@!,;:?.]/;
@@ -110,6 +111,13 @@ const SignInForm = () => {
       document.querySelector(".answer-input").innerHTML = "";
     } else {
       document.querySelector(".maj-error").style.display = "flex";
+    }
+
+     if (testNoSpace.test(e.target.value) || e.target.value == "") {
+      document.querySelector(".noSpace-error").style.display = "flex";
+      document.querySelector(".answer-input").innerHTML = "";
+    } else {
+      document.querySelector(".noSpace-error").style.display = "none";
     }
   
 
@@ -177,6 +185,7 @@ const SignInForm = () => {
             <div className="min-error"><br/>1 minuscule</div>
             <div className="nb-error">1 chiffre</div>
             <div className="charSpecial-error">1 charactère spécial</div>
+            <div className="noSpace-error">ne pas mettre d'espace</div>
             </div>
           </div>
           <br />
